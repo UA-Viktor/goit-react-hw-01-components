@@ -9,7 +9,7 @@ export const Profile = ({ profile }) => {
                 <img
                     src={profile.avatar}
                     alt="User avatar"
-                    class="avatar"
+                    className="avatar"
                 />
                 <Name>{profile.username}</Name>
                 <Text>@{profile.tag}</Text>

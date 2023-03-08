@@ -45,7 +45,7 @@ export const List = styled.ul`
   padding: 10px 30px 10px 30px;
   display: flex;
   justify-content: space-between ;
-  background-color: #e9eaec;
+  background-color: #f2f2f2;
 `;
 
 export const ListItem = styled.li`
