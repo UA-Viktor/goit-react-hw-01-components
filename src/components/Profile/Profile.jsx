@@ -1,27 +1,35 @@
 // import PropTypes from 'prop-types';
 
-import { Card } from './Profile.styled';
+import { Card, Info, Name, Text, List, ListItem, ListTitle, ListText } from './Profile.styled';
 
-import { UserInfo } from '../UserInfo/UserInfo';
-import { UserStats } from '../UserStats/UserStats';
-
-export const Profile = ({username, tag, location, avatar, followers, views, likes}) => { 
+export const Profile = ({ profile }) => { 
     return (
         <Card>
-            <UserInfo 
-                key={username}
-                username={username}
-                tag={tag}
-                location={location}
-                avatar={avatar}
-            />
-            
-            <UserStats 
-                key={tag}
-                followers={followers}
-                views={views}
-                likes={likes}
-            />
+            <Info>
+                <img
+                    src={profile.avatar}
+                    alt="User avatar"
+                    class="avatar"
+                />
+                <Name>{profile.username}</Name>
+                <Text>@{profile.tag}</Text>
+                <Text>{profile.location}</Text>
+            </Info>
+
+            <List>
+                <ListItem>
+                    <ListTitle>Followers</ListTitle>
+                    <ListText>{profile.stats.followers}</ListText>
+                </ListItem>
+                <ListItem>
+                    <ListTitle>Views</ListTitle>
+                    <ListText>{profile.stats.views}</ListText>
+                </ListItem>
+                <ListItem>
+                    <ListTitle>Likes</ListTitle>
+                    <ListText>{profile.stats.likes}</ListText>
+                </ListItem>
+            </List>
         </Card>
     );
 };
