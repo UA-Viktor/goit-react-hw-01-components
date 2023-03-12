@@ -1,3 +1,5 @@
+// import PropTypes from 'prop-types';
+
 import { ListItem, ListTitle, ListText } from './StatisticsList.styled';
 
 export const StatisticsList = ({ name, value }) => {
@@ -8,3 +10,8 @@ export const StatisticsList = ({ name, value }) => {
         </ListItem>
     )
 };
+
+// StatisticsList.propTypes = {
+//     name: PropTypes.string.isRequired,
+//     value: PropTypes.number.isRequired,
+// }

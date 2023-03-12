@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Line = styled.tr`
 
-    &:nth-child(odd) {
+    &:nth-of-type(odd) {
         background-color: #eee;
     }
 
